@@ -1,0 +1,33 @@
+.Pagination
+    list-style: none
+    display: flex
+    justify-content: center
+    margin: 20px 0
+
+    +has(item)
+        a
+            padding: 10px 16px
+            background: $accent
+            border-radius: 3px
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .2)
+            margin: 0 6px
+            text-decoration: none
+            transition: all .3s ease
+
+            &:hover
+                box-shadow: 0 1px 3px rgba(0, 0, 0, .1)
+
+        +variant(active)
+            a
+                background: #fff
+                cursor: not-allowed
+
+                &:hover
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, .2)
+
+        +variant(disabled)
+            a
+                cursor: not-allowed
+
+                &:hover
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, .2)

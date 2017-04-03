@@ -1,0 +1,40 @@
+.container
+    height: inherit
+    max-width: 1600px
+    margin: 0 auto
+    padding: 0 40px
+
+    +tablet
+        padding: 0 16px
+
+    +phone
+        padding: 0 10px
+
+    &.is-padingless
+        padding: 0
+
+.Columns
+    display: flex
+    flex-wrap: wrap
+
+.Column
+    width: 50%
+    margin-bottom: 30px
+    border-left: 2px solid $primary
+    padding-left: 30px
+
+    +desktop
+        padding-left: 12px
+
+    +tablet
+        border-left: 0
+        padding-left: 0
+
+    .is-title
+        text-align: left
+
+    +tablet
+        width: 100%
+
+        .is-title
+            text-align: center

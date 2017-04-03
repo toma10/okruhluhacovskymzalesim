@@ -1,0 +1,54 @@
+.Nav
+    float: right
+    height: $navbarHeight
+    margin: 0 20px
+    display: flex
+    align-items: center
+    list-style: none
+    z-index: 15
+    transition: all .3s ease
+
+    +has(link)
+        padding: 40px 20px
+        text-transform: uppercase
+        font-weight: 400
+        font-size: 14px
+        color: darken(#fff, 25)
+        transition: all 0.3s ease
+        text-decoration: none
+
+        +variant(active)
+            color: #fff
+
+        &:hover
+            color: #fff
+
+        img
+            max-height: 20px
+
+    +desktop
+        display: block
+        visibility: hidden
+        opacity: 0
+        float: left
+        margin: 0
+        position: absolute
+        top: $navbarHeight
+        left: 0
+        right: 0
+        width: 100%
+        height: auto
+
+        +variant(open)
+            visibility: visible
+            opacity: 1
+
+        +has(item)
+            background: $primary
+            line-height: 60px
+            text-align: center
+
+        +has(link)
+            display: inline-block
+            padding: 0
+            width: 100%

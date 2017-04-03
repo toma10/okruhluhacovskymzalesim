@@ -1,0 +1,40 @@
+.Footer
+    background: $primary
+    padding: 50px 0
+    color: #ccc
+    font-weight: 400
+
+    p
+        font-size: 13px
+        line-height: 16px
+
+    span
+        font-weight: 300
+
+    +has(name)
+        font-weight: 700
+
+    +has(links)
+        margin-top: 5px
+
+    +has(link)
+        color: #ccc
+        font-weight: 400
+        text-decoration: none
+
+        &:hover
+            text-decoration: underline
+
+    +phone
+        padding: 30px 0
+
+    .container
+        display: flex
+        justify-content: space-between
+
+        +phone
+            display: block
+            text-align: center
+
+            p
+                padding: 8px 0

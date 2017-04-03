@@ -1,0 +1,35 @@
+.Hero
+    overflow: hidden
+    z-index: 1
+    height: calc(100% - #{$navbarHeight})
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    background: $secondary
+
+    +has(item-1)
+        background-image: url('/images/hero1.jpg')
+
+        +phone
+            background-image: url('/images/hero1-768.jpg')
+
+
+    +has(item-2)
+        background-image: url('/images/hero2.jpg')
+
+        +phone
+            background-image: url('/images/hero2-768.jpg')
+
+    +has(item-3)
+        background-image: url('/images/hero3.jpg')
+
+        +phone
+            background-image: url('/images/hero3-768.jpg')
+
+    +has(item-4)
+        background-image: url('/images/hero4.jpg')
+
+        +phone
+            background-image: url('/images/hero4-768.jpg')

@@ -1,0 +1,23 @@
+.Category
+    list-style: none
+    font-size: 14px
+
+    +has(header)
+        margin-top: 4px
+        font-weight: 700
+
+    +has(sub)
+        list-style: none
+
+    +has(shortcut)
+        width: 32px
+        display: inline-block
+
+    +phone
+        +has(item)
+            display: flex
+            flex-wrap: wrap
+            margin-bottom: 2px
+
+        +has(description)
+            width: calc(100% - 32px)

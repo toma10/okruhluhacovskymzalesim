@@ -1,0 +1,23 @@
+=has($element)
+  @at-root #{&}__#{$element}
+    @content
+
+=variant($modifier)
+  @at-root #{&}--#{$modifier}
+    @content
+
+=smallphone
+    @media (max-width: 500px)
+        @content
+
+=phone
+    @media (max-width: 767px)
+        @content
+
+=tablet
+    @media (max-width: 991px)
+        @content
+
+=desktop
+    @media (max-width: 1199px)
+        @content

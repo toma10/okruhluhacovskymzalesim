@@ -1,0 +1,54 @@
+.Gallery
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+
+    +has(item)
+        position: relative
+        text-decoration: none
+        width: 30%
+        background: #fff
+        border-bottom: 3px solid $accent
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.20)
+        transition: all .3s ease
+        margin-bottom: 50px
+
+        &:hover
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05)
+
+            .Gallery__delete-form
+                opacity: 1
+                visibility: visible
+
+        +tablet
+            width: 46%
+
+        +phone
+            width: 96%
+
+    +has(image)
+        width: 100%
+
+    +has(header)
+        text-align: center
+        padding: 16px 0
+
+    +has(photo)
+        margin-bottom: 50px
+        width: 23%
+
+    +has(create)
+        position: absolute
+        top: -44px
+        right: 16px
+        width: 60px
+        height: 60px
+
+    +has(delete-form)
+        transition: all .3s ease
+        opacity: 0
+        visibility: hidden
+        position: absolute
+        top: 12px
+        right: 12px

@@ -1,0 +1,34 @@
+.Form
+    max-width: 500px
+    width: 100%
+    margin: 0 auto
+    background: #fff
+    padding: 48px 56px
+    font-size: 14px
+    border: 1px solid darken($secondary, 10)
+    border-radius: 3px
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.20)
+
+    +has(group)
+        &:not(:last-child)
+            margin-bottom: 14px
+
+        &.has-error
+            input
+                border-color: #c62828
+
+    +has(label)
+        font-size: 14px
+        font-weight: 700
+        display: block
+        margin-bottom: 10px
+
+    +has(control)
+        width: 100%
+        padding: 6px 10px
+        border: 1px solid darken($secondary, 10)
+        border-radius: 3px
+
+    .help-block
+        font-size: 12px
+        color: #c62828
