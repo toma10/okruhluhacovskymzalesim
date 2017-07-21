@@ -194,11 +194,66 @@
             </div>
         </div>
     </section>
+
+    @if (!Session::has('show-program'))
+        <div class="alert">
+            <p>Došlo k úpravě startů jednotlivých závodů. <a href="{{ url('program') }}">Zobrazit aktualizovaný program.</a></p>
+        </div>
+    @endif
 @endsection
+
+@if (!Session::has('show-program'))
+    @push('afterStylesheets')
+        <style>
+            .alert {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background: #fddb19;
+                padding: 24px 0;
+                z-index: 9999;
+                box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+                transform: translateY(100%);
+                transition: transform 0.3s ease
+            }
+
+            .alert-visible {
+                transform: none;
+            }
+
+            .alert p {
+                font-size: 0.9em;
+                text-align: center;
+            }
+        </style>
+    @endpush
+@endif
 
 @push('afterScripts')
     <script src="{{ asset('js/home.js') }}"></script>
     <script>
         var player = videojs('my-player');
     </script>
+    @if (!Session::has('show-program'))
+        <script>
+        var alert = document.querySelector('.alert');
+
+            (function() {
+                setTimeout(function() {
+                    alert.classList.add('alert-visible');
+                }, 1000)
+            })();
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 5) {
+                    alert.classList.remove('alert-visible');
+                } else {
+                    if (!alert.classList.contains('alert-visible')) {
+                        alert.classList.add('alert-visible');
+                    }
+                }
+            });
+        </script>
+    @endif
 @endpush

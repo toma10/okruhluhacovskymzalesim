@@ -19,3 +19,8 @@ Route::delete('/galerie/{gallery}/photos/{photo}', 'PhotosController@destroy')->
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+
+Route::get('/program', function() {
+    session(['show-program' => false]);
+   return redirect('propozice#program');
+});
