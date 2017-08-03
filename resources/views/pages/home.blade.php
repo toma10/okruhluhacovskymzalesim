@@ -49,29 +49,20 @@
             <p>Nezapomínáme ale ani na trasy pro mladší jezdce a cyklistická batolata.</p>
             <p>Závod je součástí Valašskokarpatské Cyklotour 2017.</p>
             <img src="images/mapa.png" class="has-padding-top" alt="Mapa závodu">
-
-            <h4 class="is-title has-padding-top">
-                <a href="https://www.youtube.com/watch?v=sKnmnguM6Ks">Reportáž z loňského roku</a>
-            </h4>
         </div>
     </section>
 
     <section class="Section Section--is-dark Section--without-padding">
         <div class="container is-padingless">
-            <video
-                id="my-player"
-                class="video-js vjs-16-9 vjs-big-play-centered"
-                controls
-                preload="auto"
-                poster="images/poster.gif"
-            >
-                <source src="videos/zavod.mp4" type="video/mp4"></source>
-                <source src="videos/zavod.webm" type="video/webm"></source>
-                <p class="vjs-no-js">
-                    To view this video please enable JavaScript, and consider upgrading
-                    to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                </p>
-            </video>
+            <div style=" position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+                <iframe
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    src="https://www.youtube.com/embed/uKuiWaqxkEQ?rel=0"
+                    frameborder="0"
+                    allowfullscreen
+                >
+                </iframe>
+            </div>
         </div>
     </section>
 
@@ -198,7 +189,4 @@
 
 @push('afterScripts')
     <script src="{{ asset('js/home.js') }}"></script>
-    <script>
-        var player = videojs('my-player');
-    </script>
 @endpush
