@@ -111,7 +111,9 @@
                     text-transform: uppercase;
                 }
             </style>
-            <p class="muted has-padding-top">V případě problémů se prosím zaregistrujte <a href="https://my.raceresult.com/75437/registration?&lang=cz&mode=1">zde</a></p>
+            <h4>
+                <a href="http://my5.raceresult.com/75437/participants?lang=cz#0_23C00E">Seznam přihlášených</a>
+            </h4>
         </div>
     </section>
 @endsection

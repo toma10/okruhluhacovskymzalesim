@@ -3,7 +3,10 @@
 @section('content')
     <section class="Section">
         <div class="container">
-            <h2 class="is-title has-padding-bottom">Výsledky</h2>
+            <h2 class="is-title has-padding-bottom">Aktuální výsledky</h2>
+            <div id="divRRPublish" class="RRPublish"></div>
+
+            <h2 class="is-title has-padding-bottom">Starší výsledky</h2>
             <div class="Columns">
                 <div class="Column">
                     <h3 class="is-title">2016</h3>
@@ -269,3 +272,10 @@
         </div>
     </section>
 @endsection
+
+@push('afterScripts')
+    <script type="text/javascript" src="//my.raceresult.com/RRPublish/load.js.php?lang=cz"></script>
+    <script type="text/javascript">
+        var rrp=new RRPublish(document.getElementById("divRRPublish"), 75437, "results");
+    </script>
+@endpush

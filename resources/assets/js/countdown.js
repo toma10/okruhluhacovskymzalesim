@@ -11,12 +11,17 @@ export default (function() {
         let endTime = new Date(settings.startDate).getTime();
         let secondsLeft = Math.round((endTime - Date.now()) / 1000);
 
+        if (secondsLeft <= 0) {
+            secondsLeft = 0;
+        }
+
         showTimeLeft(secondsLeft);
 
         countdownInterval = setInterval(() => {
             let secondsLeft = Math.round((endTime - Date.now()) / 1000);
 
             if (secondsLeft <= 0) {
+                secondsLeft = 0;
                 clearInterval(countdownInterval);
             }
 

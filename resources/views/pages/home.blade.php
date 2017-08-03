@@ -33,7 +33,7 @@
             </ul>
         </div>
 
-        <a href="{{ url('registrace') }}" class="Register">Registrace</a>
+        <a href="{{ url('vysledky') }}" class="Register">Aktuální vysledky</a>
 @endsection
 
 @section('content')
