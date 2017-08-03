@@ -66,7 +66,6 @@
         </div>
     </section>
 
-
     <section class="Section">
         <div class="container">
             <div class="Partners">
@@ -188,5 +187,5 @@
 @endsection
 
 @push('afterScripts')
-    <script src="{{ asset('js/home.js') }}"></script>
+    <script src="{{ mix('js/home.js') }}"></script>
 @endpush

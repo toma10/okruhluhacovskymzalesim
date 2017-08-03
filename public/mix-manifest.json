@@ -1,9 +1,9 @@
 {
-  "/js/home.js": "/js/home.js",
-  "/js/app.js": "/js/app.js",
-  "/css/app.css": "/css/app.css",
-  "/css/vendor.css": "/css/vendor.css",
-  "/css/gallery-vendor.css": "/css/gallery-vendor.css",
-  "/js/vendor.js": "/js/vendor.js",
-  "/js/gallery-vendor.js": "/js/gallery-vendor.js"
+  "/js/home.js": "/js/home.4973653f20ee4ea2d578.js",
+  "/js/app.js": "/js/app.0b241a434e6398d7b809.js",
+  "/css/app.css": "/css/app.7a30959be9dedb3cd61f.css",
+  "/css/vendor.css": "/css/vendor.d8aed3567f3070cf4fc5dadda7cbbe7c.css",
+  "/css/gallery-vendor.css": "/css/gallery-vendor.3dc8c51597310bebb6e00587cc60bdc1.css",
+  "/js/vendor.js": "/js/vendor.dd16a642e6a6815720f91b26bf754a7b.js",
+  "/js/gallery-vendor.js": "/js/gallery-vendor.8b5c6d53ff94afcd4efd1248921f3f33.js"
 }

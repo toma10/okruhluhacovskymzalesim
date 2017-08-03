@@ -34,11 +34,11 @@
 @endsection
 
 @push('afterStylesheets')
-    <link rel="stylesheet" href="{{ asset('css/gallery-vendor.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/gallery-vendor.css') }}">
 @endpush
 
 @push('afterScripts')
-    <script src="{{ asset('js/gallery-vendor.js') }}"></script>
+    <script src="{{ mix('js/gallery-vendor.js') }}"></script>
     <script>
         lightbox.option({
           'albumLabel': "Fotografie %1 z %2",

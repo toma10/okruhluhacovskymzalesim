@@ -39,4 +39,5 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .scripts([
         'public/js/vendor/lightbox.js',
         'public/js/vendor/dropzone.js',
-    ], 'public/js/gallery-vendor.js');
+    ], 'public/js/gallery-vendor.js')
+   .version();
