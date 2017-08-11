@@ -35,6 +35,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
         'public/js/vendor/jquery.js',
         'public/js/vendor/jquery.bxslider.js',
         'public/js/vendor/video.js',
+        'public/js/vendor/noframework.waypoints.min.js',
     ], 'public/js/vendor.js')
    .scripts([
         'public/js/vendor/lightbox.js',

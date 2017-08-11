@@ -54,14 +54,8 @@
 
     <section class="Section Section--is-dark Section--without-padding">
         <div class="container is-padingless">
-            <div style=" position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-                <iframe
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                    src="https://www.youtube.com/embed/uKuiWaqxkEQ?rel=0"
-                    frameborder="0"
-                    allowfullscreen
-                >
-                </iframe>
+            <div id="player-wrapper" style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+              <div id="player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
             </div>
         </div>
     </section>
@@ -187,5 +181,39 @@
 @endsection
 
 @push('afterScripts')
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="{{ mix('js/home.js') }}"></script>
+
+    <script>
+      var player;
+
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '360',
+          width: '640',
+          videoId: 'uKuiWaqxkEQ',
+          playerVars: { 'rel': 0, 'showinfo': 0, 'color': 'white' },
+        });
+      }
+
+      new Waypoint({
+          element: document.querySelector('#player-wrapper'),
+          handler: function(direction) {
+            if (direction == 'down') {
+                player.playVideo();
+            }
+          },
+          offset: '25%'
+        });
+
+      new Waypoint({
+          element: document.querySelector('#player-wrapper'),
+          handler: function(direction) {
+            if (direction == 'down' && player.getPlayerState() == 1) {
+                player.pauseVideo();
+            }
+          },
+          offset: '-60%'
+        });
+    </script>
 @endpush
