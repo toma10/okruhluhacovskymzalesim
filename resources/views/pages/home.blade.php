@@ -203,7 +203,7 @@
                 player.playVideo();
             }
           },
-          offset: '25%'
+          offset: '50%'
         });
 
       new Waypoint({
